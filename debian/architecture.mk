@@ -3,7 +3,7 @@
 include /usr/share/dpkg/architecture.mk
 
 rust_cpu = $(subst i586,i686,\
-$(if $(findstring -riscv64-,-$(2)-),$(subst riscv64,riscv64a23,$(1)),\
+$(if $(findstring -riscv64-,-$(2)-),$(subst riscv64,riscv64gc,$(1)),\
 $(if $(findstring -armhf-,-$(2)-),$(subst arm,armv7,$(1)),\
 $(if $(findstring -armel-,-$(2)-),$(subst arm,armv5te,$(1)),\
 $(1)))))
