@@ -1,3 +1,11 @@
+rustc-1.95 (1.95.0+dfsg-0ubuntu1deepin3) unstable; urgency=medium
+
+  * d/architecture.mk: Change riscv64 mapping from riscv64a23 to
+    riscv64gc; the stage0/snapshot toolchain only provides riscv64gc
+    stdlib, causing E0463 can't find crate for core/std on riscv64
+
+ -- lichenggang <lichenggang@uniontech.com>  Fri, 21 Aug 2026 13:31:22 +0800
+
 rustc-1.95 (1.95.0+dfsg-0ubuntu1deepin2) unstable; urgency=medium
 
   * d/p/prune/d-0012: lower libgit2-sys probe range to accept system
