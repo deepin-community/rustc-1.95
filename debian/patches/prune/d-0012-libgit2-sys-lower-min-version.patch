@@ -1,0 +1,19 @@
+Description: lower libgit2-sys minimum probe version to 1.7.0
+ deepin testing ships libgit2-dev 1.9.0, which the vendored
+ libgit2-sys-0.18.3+1.9.2 crate refuses to probe. Lower the minimum
+ so the system library is used and the removed vendored C sources
+ are not required.
+Forwarded: not-needed
+Last-Update: 2026-08-20
+
+--- a/vendor/libgit2-sys-0.18.3+1.9.2/build.rs
++++ b/vendor/libgit2-sys-0.18.3+1.9.2/build.rs
+@@ -10,7 +10,7 @@
+ /// Tries to use system libgit2 and emits necessary build script instructions.
+ fn try_system_libgit2() -> Result<pkg_config::Library, pkg_config::Error> {
+     let mut cfg = pkg_config::Config::new();
+-    match cfg.range_version("1.9.2".."1.10.0").probe("libgit2") {
++    match cfg.range_version("1.7.0".."1.10.0").probe("libgit2") {
+         Ok(lib) => {
+             for include in &lib.include_paths {
+                 println!("cargo:root={}", include.display());
