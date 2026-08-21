@@ -1,3 +1,12 @@
+rustc-1.95 (1.95.0+dfsg-0ubuntu1deepin2) unstable; urgency=medium
+
+  * d/p/prune/d-0012: lower libgit2-sys probe range to accept system
+    libgit2 1.7.x/1.9.0; avoids the broken vendored fallback which
+    panics because the dfsg source tree has no libgit2 C sources and no
+    .git directory
+
+ -- lichenggang <lichenggang@uniontech.com>  Fri, 21 Aug 2026 11:21:33 +0800
+
 rustc-1.95 (1.95.0+dfsg-0ubuntu1deepin1) unstable; urgency=medium
 
   * d/rules: Skip dh-cargo-vendored-sources when it is unavailable in

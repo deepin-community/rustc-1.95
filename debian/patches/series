@@ -14,6 +14,7 @@ prune/d-0002-mdbook-strip-embedded-libs.patch
 prune/d-0005-no-jemalloc.patch
 prune/d-0010-cargo-remove-vendored-c-crates.patch
 prune/d-0011-cargo-remove-nghttp2.patch
+prune/d-0012-libgit2-sys-lower-min-version.patch
 prune/d-0020-remove-windows-dependencies.patch
 vendor/d-0003-cc-psm-rebuild-wasm32.patch
 build/d-bootstrap-rustflags.patch
