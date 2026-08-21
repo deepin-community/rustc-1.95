@@ -1,3 +1,11 @@
+rustc-1.95 (1.95.0+dfsg-0ubuntu1deepin1) unstable; urgency=medium
+
+  * d/rules: Skip dh-cargo-vendored-sources when it is unavailable in
+    the OBS build chroot; guard the vendored sources consistency check
+    so the build no longer fails with Error 127 during dh_auto_configure
+
+ -- lichenggang <lichenggang@uniontech.com>  Fri, 21 Aug 2026 09:30:53 +0800
+
 rustc-1.95 (1.95.0+dfsg-0ubuntu1) stonking; urgency=medium
 
   * New upstream version 1.95.0 (LP: #2156635)
