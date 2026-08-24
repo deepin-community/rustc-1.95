@@ -1,3 +1,11 @@
+rustc-1.95 (1.95.0+dfsg-0ubuntu1deepin5) unstable; urgency=medium
+
+  * d/control: lower libgit2-dev build dependency to >= 1.7.0 to match
+    the libgit2-sys probe range, allowing builds against system libgit2
+    1.7.x/1.9.0
+
+ -- lichenggang <lichenggang@uniontech.com>  Mon, 24 Aug 2026 10:21:38 +0800
+
 rustc-1.95 (1.95.0+dfsg-0ubuntu1deepin4) unstable; urgency=medium
 
   * d/rules: Raise FAILURES_ALLOWED to 180 for loong64 like riscv64;
